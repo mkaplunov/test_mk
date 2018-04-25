@@ -1,4 +1,4 @@
-evaluate('Jenkinsfiles/test01.groovy')
+evaluate(new File('Jenkinsfiles/test01.groovy'))
 node {
    echo 'Hello World'
 }
