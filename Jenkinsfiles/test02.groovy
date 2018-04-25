@@ -1,15 +1,15 @@
 //----------------------------------------------------------------------------------------------------------------------
-void slack_info(String state, String color, String postfix = null)
+def slack_info(String state, String color, String postfix = null)
 {
     notify_slack(params.slack_channel?.trim(), state, color, postfix)
 }
 //----------------------------------------------------------------------------------------------------------------------
-void slack_error(String state, String color, String postfix = null)
+def slack_error(String state, String color, String postfix = null)
 {
     notify_slack(params.slack_error_channel?.trim(), state, color, postfix)
 }
 //----------------------------------------------------------------------------------------------------------------------
-void notify_slack(String channel, String state, String color, String postfix = null)
+def notify_slack(String channel, String state, String color, String postfix = null)
 {
     if (!channel)
     {
